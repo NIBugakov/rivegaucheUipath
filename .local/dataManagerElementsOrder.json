@@ -11,8 +11,28 @@
     {
       "Path": "Main.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "br_main&Sequence_1",
+        "str_pathToSite&Sequence_1",
+        "list_brands&Sequence_1"
+      ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CreateTransaction.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_extractDataTable&Sequence_1",
+        "ExtractDataTable&Sequence_3",
+        "str_city&Sequence_2",
+        "list_citys&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_br_main",
+        "in_str_brend"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
