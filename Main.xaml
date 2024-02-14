@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1187,1188" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1187,1728" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -34,6 +34,8 @@
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.UIAutomationCore.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -91,21 +93,33 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="529,1123" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="548,1663" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(x:String)" Name="list_brands" />
       <Variable x:TypeArguments="x:String" Name="str_pathToSite" />
       <Variable x:TypeArguments="ui:Browser" Name="br_main" />
+      <Variable x:TypeArguments="scg:List(x:String)" Name="list_citys" />
+      <Variable x:TypeArguments="sd:DataTable" Name="dt_extractURL" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Comment DisplayName="Комментарий" sap:VirtualizedContainerService.HintSize="467,57" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Переменны" />
-    <Assign sap:VirtualizedContainerService.HintSize="467,83" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <ui:Comment DisplayName="Комментарий" sap:VirtualizedContainerService.HintSize="486,56" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Переменны" />
+    <Assign sap:VirtualizedContainerService.HintSize="486,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+      <Assign.To>
+        <OutArgument x:TypeArguments="scg:List(x:String)">[list_citys]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String)({"Санкт-Петербур","Москва","Красноярск"})]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="486,82" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="scg:List(x:String)">[list_brands]</OutArgument>
       </Assign.To>
@@ -113,7 +127,7 @@
         <InArgument x:TypeArguments="scg:List(x:String)">[New List(Of String)({"D.S.&amp;DURGA","RUSSIAN BEAUTY GURU"})]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="467,83" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="486,82" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[str_pathToSite]</OutArgument>
       </Assign.To>
@@ -121,8 +135,8 @@
         <InArgument x:TypeArguments="x:String">https://rivegauche.ru/</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:Comment DisplayName="Комментарий" sap:VirtualizedContainerService.HintSize="467,57" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Вызов скриптов" />
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Firefox" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,142" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[br_main]" Url="[str_pathToSite]">
+    <ui:Comment DisplayName="Комментарий" sap:VirtualizedContainerService.HintSize="486,56" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Вызов скриптов" />
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="486,140" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[br_main]" Url="[str_pathToSite]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -131,28 +145,60 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="467,390" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list_brands]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="486,814" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[list_brands]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="str_currentBrand" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Тело" sap:VirtualizedContainerService.HintSize="376,202" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Тело" sap:VirtualizedContainerService.HintSize="452,628" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CreateTransaction.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CreateTransaction.xaml">
+            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CreateTransaction.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="410,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="CreateTransaction.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="x:String" x:Key="in_str_brend">
                   <VisualBasicValue x:TypeArguments="x:String" ExpressionText="str_currentBrand" />
                 </InArgument>
-                <InArgument x:TypeArguments="ui:Browser" x:Key="in_br_main">
-                  <VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="br_main" />
-                </InArgument>
+                <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_dt_extractURL">
+                  <VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dt_extractURL" />
+                </OutArgument>
+                <InOutArgument x:TypeArguments="ui:Browser" x:Key="io_br_main">
+                  <VisualBasicReference x:TypeArguments="ui:Browser" ExpressionText="br_main" />
+                </InOutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
+            <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="410,387" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[dt_extractURL.Rows]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row_url" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Тело" sap:VirtualizedContainerService.HintSize="376,201" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Process.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Process.xaml">
+                      <ui:InvokeWorkflowFile.Arguments>
+                        <InArgument x:TypeArguments="scg:List(x:String)" x:Key="in_list_citys">
+                          <VisualBasicValue x:TypeArguments="scg:List(x:String)" ExpressionText="list_citys" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_str_url">
+                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="row_url(&quot;URL&quot;).ToString" />
+                        </InArgument>
+                        <InOutArgument x:TypeArguments="ui:Browser" x:Key="io_br_main">
+                          <VisualBasicReference x:TypeArguments="ui:Browser" ExpressionText="br_main" />
+                        </InOutArgument>
+                      </ui:InvokeWorkflowFile.Arguments>
+                    </ui:InvokeWorkflowFile>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
           </Sequence>
         </ActivityAction>
       </ui:ForEach.Body>
