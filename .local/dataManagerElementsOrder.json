@@ -12,6 +12,8 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "list_citys&Sequence_1",
+        "dt_extractURL&Sequence_1",
         "br_main&Sequence_1",
         "str_pathToSite&Sequence_1",
         "list_brands&Sequence_1"
@@ -24,15 +26,49 @@
       "Path": "CreateTransaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "dt_extractDataTable&Sequence_1",
-        "ExtractDataTable&Sequence_3",
-        "str_city&Sequence_2",
-        "list_citys&Sequence_1"
+        "str_city&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
-        "in_br_main",
+        "out_dt_extractURL",
+        "io_br_main",
         "in_str_brend"
       ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_ref&Sequence_34",
+        "ui_allObjectColor&Sequence_18",
+        "ui_allObjectValue&Sequence_6",
+        "str_textColor&Sequence_4",
+        "list_sizeURL&Sequence_4",
+        "list_colorURL&Sequence_4",
+        "out_refdas&Sequence_6",
+        "bool_size&Sequence_6",
+        "str_ref&Sequence_5",
+        "bool_color&Sequence_14",
+        "str_ref&Sequence_15"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_str_urlSite",
+        "in_str_urlTransaction",
+        "in_list_citys",
+        "io_br_main"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Test.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_ref&Sequence_2",
+        "list_children&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
