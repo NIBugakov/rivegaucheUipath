@@ -12,6 +12,12 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_test&Sequence_1",
+        "str_argument&Sequence_1",
+        "dt_finalTable&Sequence_1",
+        "dt_productTable&Sequence_3",
+        "dt_samlpe&Sequence_3",
+        "list_allTypeProdURL&Sequence_1",
         "list_citys&Sequence_1",
         "dt_extractURL&Sequence_1",
         "br_main&Sequence_1",
@@ -40,6 +46,11 @@
       "Path": "Process.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dt_sample&Sequence_4",
+        "row_product&Sequence_14",
+        "str_argument&Sequence_14",
+        "str_currentURL&Sequence_14",
+        "out_extractData&Sequence_14",
         "str_ref&Sequence_34",
         "ui_allObjectColor&Sequence_18",
         "ui_allObjectValue&Sequence_6",
@@ -53,6 +64,7 @@
         "str_ref&Sequence_15"
       ],
       "ArgumentsSectionElementsOrder": [
+        "out_dt_sample",
         "in_str_urlSite",
         "in_str_urlTransaction",
         "in_list_citys",
@@ -65,10 +77,42 @@
       "Path": "Test.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "dt_dsad&Sequence_1",
+        "dt_dsadasdsad&Sequence_1",
+        "out_row_produc&Sequence_1",
         "str_ref&Sequence_2",
         "list_children&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ExtractData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_currentURL&Sequence_2",
+        "bool_onlineShopExist&Sequence_2",
+        "str_addresses&Sequence_14",
+        "list_vals&Sequence_14",
+        "dt_sample&Sequence_1",
+        "list_citysExist&Sequence_1",
+        "dt_adressCity&Sequence_1",
+        "dt_adressAllCity&Sequence_1",
+        "str_fullText&Sequence_2",
+        "bool_colorExist&Sequence_2",
+        "bool_valueExist&Sequence_2",
+        "bool_cityExist&Sequence_7",
+        "str_currentCity&Sequence_7",
+        "ExtractDataTable&Sequence_8"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt_sample",
+        "in_str_urlTypeOfProd",
+        "io_br_main",
+        "out_row_product",
+        "in_list_cityOfTrans"
+      ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
     }
