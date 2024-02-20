@@ -3,6 +3,7 @@
     <x:Property Name="in_str_brend" Type="InArgument(x:String)" />
     <x:Property Name="out_dt_extractURL" Type="OutArgument(sd:DataTable)" />
     <x:Property Name="io_br_main" Type="InOutArgument(ui:Browser)" />
+    <x:Property Name="in_str_pathToSite" Type="InArgument(x:String)" />
   </x:Members>
   <VisualBasic.Settings>
     <x:Null />
@@ -204,14 +205,14 @@
                         <uix:TargetAnchorable BrowserURL="https://rivegauche.ru/search?st=D.S.%26DURGA&amp;categoryCode=search&amp;text=D.S.%26DURGA&amp;offset=24" CvTextArea="1139, 818, 62, 15" CvTextArgument="BnepeA &gt;&gt;" CvType="Text" DesignTimeRectangle="1140, 815, 60, 19" DesignTimeScaleFactor="0.800000011920929" ElementType="Text" FriendlyName="'Вперед »'" FullSelectorArgument="&lt;webctrl aaname='Вперед »' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Вперед »' tag='A' type='' class='button ng-star-inserted' check:innerText='Вперед »' /&gt;" Guid="62da0cdf-2a3f-4021-bc3c-4696de45ce81" ScopeSelectorArgument="&lt;html app='chrome.exe' title='РИВ ГОШ - Магазин парфюмерии и косметики – страница №1' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive" />
                       </uix:NExtractData.NextLink>
                       <uix:NExtractData.Target>
-                        <uix:TargetAnchorable BrowserURL="https://rivegauche.ru/search?st=D.S.%26DURGA&amp;categoryCode=search&amp;text=D.S.%26DURGA&amp;offset=24" DesignTimeRectangle="683, -5860, 848, 6095" DesignTimeScaleFactor="0.800000011920929" FriendlyName="'50% В'" FullSelectorArgument="&lt;webctrl tag='CMS-PRODUCT-LISTING' /&gt;" Guid="c0a2723b-a0e6-441d-96bb-518a537b9f92" InformativeScreenshot="9c359a07024f14ac1fb96fd000f5f4b1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='РИВ ГОШ - Магазин парфюмерии и косметики – страница №1' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        <uix:TargetAnchorable BrowserURL="https://rivegauche.ru/search?st=D.S.%26DURGA&amp;categoryCode=search&amp;text=D.S.%26DURGA&amp;offset=24" DesignTimeRectangle="683, -5860, 848, 6095" DesignTimeScaleFactor="0.800000011920929" FriendlyName="'50% В'" FullSelectorArgument="&lt;webctrl tag='CMS-PRODUCT-LISTING' /&gt;" Guid="c0a2723b-a0e6-441d-96bb-518a537b9f92" InformativeScreenshot="9c359a07024f14ac1fb96fd000f5f4b1.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*РИВ ГОШ*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                       </uix:NExtractData.Target>
                     </uix:NExtractData>
                   </Sequence>
                 </ActivityAction>
               </uix:NApplicationCard.Body>
               <uix:NApplicationCard.TargetApp>
-                <uix:TargetApp Area="-1928, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAzSURBVDhPY/jPxP8fK46RIwoPBwP2spX8x4axKcaGRw2ghgHYBMEYW9RiwaMGUGwA/38AuipMYzU17aAAAAAASUVORK5CYII=" InformativeScreenshot="c27b3936f20e16321be78c587eaaea9f.jpg" Selector="&lt;html app='chrome.exe' title='РИВ ГОШ - Магазин парфюмерии и косметики' /&gt;" Title="РИВ ГОШ - Магазин парфюмерии и косметики" Url="https://rivegauche.ru" />
+                <uix:TargetApp Area="-1928, -8, 1936, 1056" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAzSURBVDhPY/jPxP8fK46RIwoPBwP2spX8x4axKcaGRw2ghgHYBMEYW9RiwaMGUGwA/38AuipMYzU17aAAAAAASUVORK5CYII=" InformativeScreenshot="c27b3936f20e16321be78c587eaaea9f.jpg" Selector="&lt;html app='chrome.exe' title='РИВ ГОШ*' /&gt;" Title="РИВ ГОШ - Магазин парфюмерии и косметики" Url="[in_str_pathToSite]" />
               </uix:NApplicationCard.TargetApp>
             </uix:NApplicationCard>
           </Sequence>

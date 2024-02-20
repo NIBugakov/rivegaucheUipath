@@ -9,7 +9,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1078,4332</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>899,3833</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtractData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -119,7 +119,7 @@
       <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ExtractData" sap:VirtualizedContainerService.HintSize="668,4267" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ExtractData" sap:VirtualizedContainerService.HintSize="668,3768" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_sample" />
       <Variable x:TypeArguments="scg:List(x:String)" Name="list_citysExist" />
@@ -132,7 +132,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:BuildDataTable DataTable="[dt_adressAllCity]" DisplayName="создание таблицы хранящая все адресса продукта" sap:VirtualizedContainerService.HintSize="606,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;Address&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <Assign DisplayName="Создание новой строки таблицы" sap:VirtualizedContainerService.HintSize="606,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign DisplayName="Создание новой строки таблицы" sap:VirtualizedContainerService.HintSize="606,81" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="sd:DataRow">[out_row_product]</OutArgument>
       </Assign.To>
@@ -140,13 +140,13 @@
         <InArgument x:TypeArguments="sd:DataRow">[in_dt_sample.NewRow]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[io_br_main]" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="606,3934" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
+    <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[io_br_main]" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="606,3436" sap2010:WorkflowViewState.IdRef="BrowserScope_1">
       <ui:BrowserScope.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="572,3825" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Сделать" sap:VirtualizedContainerService.HintSize="572,3327" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_fullText" />
               <Variable x:TypeArguments="x:Boolean" Name="bool_colorExist" />
@@ -160,7 +160,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:Comment DisplayName="Комментарий" sap:VirtualizedContainerService.HintSize="510,75" sap2010:WorkflowViewState.IdRef="Comment_1" Text="// Ссылка ссответвующая текущему обьему и цвету (если есть) " />
-            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="url" DisplayName="Получение текущей ссылки" sap:VirtualizedContainerService.HintSize="510,183" sap2010:WorkflowViewState.IdRef="GetAttribute_5">
+            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="url" DisplayName="Получение текущей ссылки" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="GetAttribute_5">
               <ui:GetAttribute.Result>
                 <OutArgument x:TypeArguments="x:String">[str_currentURL]</OutArgument>
               </ui:GetAttribute.Result>
@@ -173,7 +173,7 @@
               </ui:GetAttribute.Target>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -199,35 +199,29 @@
                 <Sequence sap2010:WorkflowViewState.IdRef="Sequence_21" />
               </If.Else>
             </If>
-            <ui:RetryScope DisplayName="Повтор попытки забрать название продукта" sap:VirtualizedContainerService.HintSize="510,489" sap2010:WorkflowViewState.IdRef="RetryScope_2" NumberOfRetries="10" RetryInterval="00:00:00.5000000">
-              <ui:RetryScope.ActivityBody>
-                <ActivityAction>
-                  <Sequence DisplayName="Действие" sap:VirtualizedContainerService.HintSize="450,314" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="innertext" DisplayName="Получение атрибута с названием" sap:VirtualizedContainerService.HintSize="388,203" sap2010:WorkflowViewState.IdRef="GetAttribute_3">
-                      <ui:GetAttribute.Result>
-                        <OutArgument x:TypeArguments="x:Object">[out_row_product("название")]</OutArgument>
-                      </ui:GetAttribute.Result>
-                      <ui:GetAttribute.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6c997c19-a90e-49d6-b11e-d84a9444e66b" InformativeScreenshot="d556fcc99f9830d1aa3172c463e74cd5" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl tag='H1' /&gt;&lt;webctrl parentclass='my-1 sm:my-4' /&gt;" TimeoutMS="100">
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:GetAttribute.Target>
-                    </ui:GetAttribute>
-                  </Sequence>
-                </ActivityAction>
-              </ui:RetryScope.ActivityBody>
-              <ui:RetryScope.Condition>
-                <ActivityFunc x:TypeArguments="x:Boolean" />
-              </ui:RetryScope.Condition>
-            </ui:RetryScope>
+            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" DisplayName="Find Element 'DIV'" sap:VirtualizedContainerService.HintSize="510,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1" WaitVisible="True">
+              <ui:WaitUiElementAppear.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3cd2322b-b4a1-4ff9-9a43-ce763342f2fa" InformativeScreenshot="675fec4d0bed5b35af5de9c027a92620" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl tag='H1' /&gt;&lt;webctrl parentclass='my-1 sm:my-4' /&gt;" WaitForReady="COMPLETE">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                </ui:Target>
+              </ui:WaitUiElementAppear.Target>
+            </ui:WaitUiElementAppear>
+            <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="innertext" DisplayName="Получение атрибута с названием" sap:VirtualizedContainerService.HintSize="510,203" sap2010:WorkflowViewState.IdRef="GetAttribute_3">
+              <ui:GetAttribute.Result>
+                <OutArgument x:TypeArguments="x:Object">[out_row_product("название")]</OutArgument>
+              </ui:GetAttribute.Result>
+              <ui:GetAttribute.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6c997c19-a90e-49d6-b11e-d84a9444e66b" InformativeScreenshot="d556fcc99f9830d1aa3172c463e74cd5" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl tag='H1' /&gt;&lt;webctrl parentclass='my-1 sm:my-4' /&gt;" TimeoutMS="2000" WaitForReady="COMPLETE" />
+              </ui:GetAttribute.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:GetAttribute>
             <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Получение цены" sap:VirtualizedContainerService.HintSize="510,107" sap2010:WorkflowViewState.IdRef="GetValue_1">
               <ui:GetValue.Target>
                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7be0c2a5-d909-4c21-a550-cd9078f124fc" InformativeScreenshot="cda15c549868aa055dcb0fb1542c02b8" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl class='price first' /&gt;">
@@ -245,7 +239,7 @@
             </ui:GetValue>
             <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Получение всей строки с id " sap:VirtualizedContainerService.HintSize="510,107" sap2010:WorkflowViewState.IdRef="GetValue_2">
               <ui:GetValue.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7be0c2a5-d909-4c21-a550-cd9078f124fc" InformativeScreenshot="645068787ade277d0b4ca5769a507a06" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl tag='DIV' innertext='ID:*' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7be0c2a5-d909-4c21-a550-cd9078f124fc" InformativeScreenshot="645068787ade277d0b4ca5769a507a06" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl aaname='*ID:*' class='code ng-star-inserted' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>
@@ -263,22 +257,22 @@
                 <OutArgument x:TypeArguments="x:Object">[out_row_product("id")]</OutArgument>
               </Assign.To>
               <Assign.Value>
-                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(str_fullText,$"\s(.*)").Value]</InArgument>
+                <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(str_fullText,$"ID.\s*(.*)").Value]</InArgument>
               </Assign.Value>
             </Assign>
             <ui:UiElementExists DisplayName="Проверка существоания поля цвета" Exists="[bool_colorExist]" sap:VirtualizedContainerService.HintSize="510,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="82c53ebb-9a5a-496d-b846-5b3fe8bcc5d9" InformativeScreenshot="82ead424dd00627da60e189381550abb" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl class='ng-value-container' innertext='Выберите оттенок*' /&gt;" TimeoutMS="300">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="82c53ebb-9a5a-496d-b846-5b3fe8bcc5d9" InformativeScreenshot="82ead424dd00627da60e189381550abb" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl class='ng-value-container' innertext='*Выберите оттенок*' /&gt;" TimeoutMS="300">
                   <ui:Target.WaitForReady>
                     <InArgument x:TypeArguments="ui:WaitForReady" />
                   </ui:Target.WaitForReady>
                 </ui:Target>
               </ui:UiElementExists.Target>
             </ui:UiElementExists>
-            <If Condition="[bool_colorExist]" DisplayName="Если есть поле" sap:VirtualizedContainerService.HintSize="510,377" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[bool_colorExist]" DisplayName="Если есть поле" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -291,7 +285,7 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Получение цвета" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="GetValue_3">
                     <ui:GetValue.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7be0c2a5-d909-4c21-a550-cd9078f124fc" InformativeScreenshot="82ead424dd00627da60e189381550abb" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl class='ng-value-container' innertext='Выберите оттенок*' /&gt;&lt;webctrl tag='SPAN' /&gt;">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7be0c2a5-d909-4c21-a550-cd9078f124fc" InformativeScreenshot="82ead424dd00627da60e189381550abb" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl class='ng-value-container' innertext='*Выберите оттенок*' /&gt;&lt;webctrl tag='SPAN' /&gt;">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
@@ -318,7 +312,7 @@
             </If>
             <ui:UiElementExists DisplayName="Проверка существования поля обьема" Exists="[bool_valueExist]" sap:VirtualizedContainerService.HintSize="510,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="01e0273a-6d8b-450c-8a73-e567bf147d2c" InformativeScreenshot="79f1553670f32dd490c3a61971c6499d" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl innertext=' Выберите объем*' /&gt;&lt;webctrl class='variants ng-star-inserted' /&gt;" TimeoutMS="300">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="01e0273a-6d8b-450c-8a73-e567bf147d2c" InformativeScreenshot="79f1553670f32dd490c3a61971c6499d" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl innertext='*Выберите объем*' /&gt;&lt;webctrl class='variants ng-star-inserted' /&gt;" TimeoutMS="300">
                   <ui:Target.WaitForReady>
                     <InArgument x:TypeArguments="ui:WaitForReady" />
                   </ui:Target.WaitForReady>
@@ -331,10 +325,10 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:UiElementExists>
-            <If Condition="[bool_valueExist]" DisplayName="Если есть поле" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[bool_valueExist]" DisplayName="Если есть поле" sap:VirtualizedContainerService.HintSize="510,499" sap2010:WorkflowViewState.IdRef="If_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -365,7 +359,7 @@
                       <OutArgument x:TypeArguments="x:Object">[out_row_product("обьем")]</OutArgument>
                     </Assign.To>
                     <Assign.Value>
-                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(str_fullText,$"\|\s(\d*)").Value]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(str_fullText,$"(\d*)\s*(мл|л|г|кг)$").Groups(1).Value]</InArgument>
                     </Assign.Value>
                   </Assign>
                 </Sequence>
@@ -374,9 +368,9 @@
                 <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6" />
               </If.Else>
             </If>
-            <ui:UiElementExists DisplayName="Проверка существования поля обьема" Exists="[bool_onlineShopExist]" sap:VirtualizedContainerService.HintSize="510,107" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+            <ui:UiElementExists DisplayName="Проверка существования поля &quot;наличеие в онлайн&quot;" Exists="[bool_onlineShopExist]" sap:VirtualizedContainerService.HintSize="510,107" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
               <ui:UiElementExists.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="01e0273a-6d8b-450c-8a73-e567bf147d2c" InformativeScreenshot="b02d165382fac6876cea6cdbf1aec69a" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl class='online-available ng-star-inserted' innertext=' В наличии только онлайн ' /&gt;" TimeoutMS="300">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="01e0273a-6d8b-450c-8a73-e567bf147d2c" InformativeScreenshot="b02d165382fac6876cea6cdbf1aec69a" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl class='online-available ng-star-inserted' innertext='*В наличии только онлайн*' /&gt;" TimeoutMS="300">
                   <ui:Target.WaitForReady>
                     <InArgument x:TypeArguments="ui:WaitForReady" />
                   </ui:Target.WaitForReady>
@@ -389,7 +383,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:UiElementExists>
-            <If Condition="[bool_onlineShopExist]" DisplayName="Если товар только онлайн" sap:VirtualizedContainerService.HintSize="510,402" sap2010:WorkflowViewState.IdRef="If_7">
+            <If Condition="[bool_onlineShopExist]" DisplayName="Если товар только онлайн" sap:VirtualizedContainerService.HintSize="510,52" sap2010:WorkflowViewState.IdRef="If_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_22">
                   <sap:WorkflowViewStateService.ViewState>
@@ -400,22 +400,23 @@
                 </Sequence>
               </If.Then>
               <If.Else>
-                <Sequence sap:VirtualizedContainerService.HintSize="300,140" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                <Sequence sap:VirtualizedContainerService.HintSize="678,2669" sap2010:WorkflowViewState.IdRef="Sequence_23">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="258,52" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_list_cityOfTrans]">
+                  <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="636,2581" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_list_cityOfTrans]">
                     <ui:ForEach.Body>
                       <ActivityAction x:TypeArguments="x:String">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:String" Name="currentCity" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Тело" sap:VirtualizedContainerService.HintSize="602,2137" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <Sequence DisplayName="Тело" sap:VirtualizedContainerService.HintSize="602,2395" sap2010:WorkflowViewState.IdRef="Sequence_7">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:Boolean" Name="bool_cityExist" />
                             <Variable x:TypeArguments="x:String" Name="str_currentCity" />
+                            <Variable x:TypeArguments="x:Boolean" Name="bool_fieldExist" />
                           </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -442,7 +443,7 @@
                               </ui:CursorPosition>
                             </ui:Click.CursorPosition>
                             <ui:Click.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c3404ab-707a-49d2-86a4-a96094d85675" InformativeScreenshot="cca29d167edbba2d3fe9398e5a080162" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl aaname='В других городах ' tag='DIV' /&gt;">
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c3404ab-707a-49d2-86a4-a96094d85675" InformativeScreenshot="cca29d167edbba2d3fe9398e5a080162" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl aaname='*В других городах*' tag='DIV' /&gt;">
                                 <ui:Target.TimeoutMS>
                                   <InArgument x:TypeArguments="x:Int32" />
                                 </ui:Target.TimeoutMS>
@@ -452,7 +453,18 @@
                               </ui:Target>
                             </ui:Click.Target>
                           </ui:Click>
-                          <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="560,90" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                          <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'DIV'" sap:VirtualizedContainerService.HintSize="560,107" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
+                            <ui:UiElementExists.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bd5ae0af-a0fc-4294-bcf7-33c9d826f80d" InformativeScreenshot="3ff85e8d4aa393180ffb25772097777a" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl class='header' aaname='*Наличие*' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:UiElementExists.Target>
+                          </ui:UiElementExists>
                           <ui:UiElementExists DisplayName="Element Exists 'DIV'" Exists="[bool_cityExist]" sap:VirtualizedContainerService.HintSize="560,107" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
                             <ui:UiElementExists.Target>
                               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="49d81b41-c649-4a64-a37f-b2d177f44052" InformativeScreenshot="139d8146f492da95c22bc83711216f55" Selector="[string.Format(&quot;&lt;html app='chrome.exe' /&gt;&lt;webctrl class='item ng-star-inserted' innertext='{0}' /&gt;&quot;, str_currentCity)]" TimeoutMS="3000" WaitForReady="COMPLETE" />
@@ -569,7 +581,7 @@
                               <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9" />
                             </If.Else>
                           </If>
-                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="560,107" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'DIV'" sap:VirtualizedContainerService.HintSize="560,107" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
                             <ui:Click.CursorPosition>
                               <ui:CursorPosition Position="TopRight">
                                 <ui:CursorPosition.OffsetX>
@@ -591,13 +603,38 @@
                               </ui:Target>
                             </ui:Click.Target>
                           </ui:Click>
-                          <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="560,90" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                          <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[bool_fieldExist]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="560,331" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2" MaxIterations="15">
+                            <ui:InterruptibleDoWhile.Body>
+                              <Sequence DisplayName="Текст" sap:VirtualizedContainerService.HintSize="376,195" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:UiElementExists DisplayName="Существует ли поле адрессов " Exists="[bool_fieldExist]" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                                  <ui:UiElementExists.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="db9874aa-7773-45d1-9447-1fdd58527d50" InformativeScreenshot="82a26694e17d9226c64823f45b965290" Selector="&lt;html app='chrome.exe' /&gt;&lt;webctrl parentclass='*inserted open*' /&gt;" TimeoutMS="2000">
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:UiElementExists.Target>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:UiElementExists>
+                              </Sequence>
+                            </ui:InterruptibleDoWhile.Body>
+                          </ui:InterruptibleDoWhile>
                         </Sequence>
                       </ActivityAction>
                     </ui:ForEach.Body>
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>

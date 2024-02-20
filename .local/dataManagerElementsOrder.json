@@ -12,17 +12,17 @@
       "Path": "Main.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "list_brands&Sequence_1",
+        "str_pathToSite&Sequence_1",
+        "br_main&Sequence_1",
+        "list_citys&Sequence_1",
+        "dt_extractURL&Sequence_1",
+        "list_allTypeProdURL&Sequence_1",
         "str_test&Sequence_1",
         "str_argument&Sequence_1",
         "dt_finalTable&Sequence_1",
         "dt_productTable&Sequence_3",
-        "dt_samlpe&Sequence_3",
-        "list_allTypeProdURL&Sequence_1",
-        "list_citys&Sequence_1",
-        "dt_extractURL&Sequence_1",
-        "br_main&Sequence_1",
-        "str_pathToSite&Sequence_1",
-        "list_brands&Sequence_1"
+        "dt_samlpe&Sequence_3"
       ],
       "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": [],
@@ -32,9 +32,11 @@
       "Path": "CreateTransaction.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "str_test&Sequence_2",
         "str_city&Sequence_2"
       ],
       "ArgumentsSectionElementsOrder": [
+        "in_str_pathToSite",
         "out_dt_extractURL",
         "io_br_main",
         "in_str_brend"
@@ -74,23 +76,10 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Test.xaml",
-      "SortBy": 0,
-      "VariablesSectionElementsOrder": [
-        "dt_dsad&Sequence_1",
-        "dt_dsadasdsad&Sequence_1",
-        "out_row_produc&Sequence_1",
-        "str_ref&Sequence_2",
-        "list_children&Sequence_1"
-      ],
-      "ArgumentsSectionElementsOrder": [],
-      "ConstantsSectionElementsOrder": [],
-      "AddedNamespaces": null
-    },
-    {
       "Path": "ExtractData.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "bool_fieldExist&Sequence_7",
         "str_currentURL&Sequence_2",
         "bool_onlineShopExist&Sequence_2",
         "str_addresses&Sequence_14",
@@ -112,6 +101,33 @@
         "io_br_main",
         "out_row_product",
         "in_list_cityOfTrans"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SQL_takeData.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_city&Sequence_1",
+        "dt_brand&Sequence_1",
+        "sql_riwGoush&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_list_city",
+        "out_list_brand"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SQL_insertDataTable.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "sql_riwGoush&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_dt_products"
       ],
       "ConstantsSectionElementsOrder": [],
       "AddedNamespaces": null
