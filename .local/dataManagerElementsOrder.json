@@ -62,8 +62,7 @@
         "out_refdas&Sequence_6",
         "bool_size&Sequence_6",
         "str_ref&Sequence_5",
-        "bool_color&Sequence_14",
-        "str_ref&Sequence_15"
+        "bool_color&Sequence_14"
       ],
       "ArgumentsSectionElementsOrder": [
         "out_dt_sample",

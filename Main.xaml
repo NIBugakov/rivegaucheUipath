@@ -145,7 +145,7 @@
       </Assign.Value>
     </Assign>
     <ui:Comment DisplayName="Комментарий" sap:VirtualizedContainerService.HintSize="486,56" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// Вызов скриптов" />
-    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Закрытие всех процессов" sap:VirtualizedContainerService.HintSize="486,52" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="chrome">
+    <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" AppliesTo="OnlyCurrentUser" DisplayName="Закрытие всех процессов" sap:VirtualizedContainerService.HintSize="486,52" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="chrome">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -231,9 +231,7 @@
     </ui:ForEach>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SQL_insertDataTable.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="486,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="SQL_insertDataTable.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_products">
-          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dt_finalTable" />
-        </InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_products">[dt_finalTable]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
